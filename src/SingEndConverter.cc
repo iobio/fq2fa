@@ -3,6 +3,11 @@
 using namespace fq2fa;
 using YiCppLib::KSeqCpp;
 
+SingEndConverter::SingEndConverter():
+    seqCpp(KSeqCpp::u_ptr(new KSeqCpp()))
+{
+
+}
 SingEndConverter::SingEndConverter(const char* filename) :
 	seqCpp(KSeqCpp::u_ptr(new KSeqCpp(filename)))
 {

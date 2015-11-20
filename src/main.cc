@@ -31,7 +31,7 @@ int main(int argc, char* argv[]) {
 
 	switch(argc) {
 		case 1:
-			std::cout<<"Usage "<<argv[0]<<" <fastq file> [second fastq file]"<<std::endl;
+			std::cout<<SingEndConverter();
 			break;
 		case 2:
 			std::cout<<SingEndConverter(argv[1]);

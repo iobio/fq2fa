@@ -7,6 +7,7 @@
 namespace fq2fa {
 	class SingEndConverter : public Converter {
 		public:
+            SingEndConverter();
 			SingEndConverter(const char* filename);
 			YiCppLib::KSeqCpp::FastqRecord::u_ptr next() override;
 
