@@ -90,8 +90,10 @@ KSeqCpp::FastqRecord::u_ptr PairEndConverter::makeFastaRecord(KSeqCpp::FastqReco
 }
 
 KSeqCpp::FastqRecord::u_ptr PairEndConverter::makeFastaRecord(const KSeqCpp::FastqRecord::u_ptr& rec1, const KSeqCpp::FastqRecord::u_ptr& rec2) {
+    auto name = rec1->name;
+    auto seq = rec1->sequence + "+" + rec2->sequence;
 	return KSeqCpp::FastqRecord::u_ptr(new KSeqCpp::FastqRecord {
-			.name = rec1->name,
-			.sequence = rec1->sequence + "+" + rec2->sequence
+			.name = name,
+			.sequence = seq
 			});
 }
